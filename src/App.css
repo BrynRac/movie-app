@@ -15,6 +15,32 @@ h4 {
 
 .App {
   text-align: center;
+  margin: 2rem;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.1s;
+}
+
+a:hover {
+  color: white;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navLinks {
+  list-style-type: none;
+  display: flex;
+}
+
+.navLinks li {
+  margin-left: 1rem;
 }
 
 @keyframes App-logo-spin {
