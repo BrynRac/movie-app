@@ -6,18 +6,22 @@ import { Route, Switch } from 'react-router-dom';
 import Nav from './components/Nav';
 import Home from './components/Home';
 import About from './components/About';
+import Footer from './components/Footer';
 
 function App() {
   return (
     <main className="App">
       <Nav />
 
-      <h1>Hello World</h1>
-      <Switch>
-        <Route exact path="/" component={Home} />
-        <Route path="/about" component={About} />
-        <Nav />
-      </Switch>
+      <div className="content-container">
+        <h1>Hello World</h1>
+        <Switch>
+          <Route exact path="/" component={Home} />
+          <Route path="/about" component={About} />
+          <Nav />
+        </Switch>
+      </div>
+      <Footer />
     </main>
   );
 }
