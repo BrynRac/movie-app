@@ -23,7 +23,7 @@ function Search({ searchMovie, fetchMovies, text }) {
         <input
           onChange={(e) => inputHandler(e)}
           type="text"
-          placeholder="Search for a movie"
+          placeholder="Search for a movie or TV series..."
         />
         <button>Search</button>
       </form>

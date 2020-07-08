@@ -1,12 +1,23 @@
 import React from 'react';
 import Movie from './Movie';
+import { connect } from 'react-redux';
 
-export default function MovieList() {
+function MovieList({ movies }) {
   return (
     <div>
       <ul className="movieList">
-        <Movie />
+        {movies.length 
+          ? movies.map((movie) => <Movie key={movie.imdbID} movie={movie} />)
+          : null}
       </ul>
     </div>
   );
 }
+
+const mapStateToProps = (state) => {
+  return {
+    movies: state.movies.movies,
+  };
+};
+
+export default connect(mapStateToProps)(MovieList);

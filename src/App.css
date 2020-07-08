@@ -27,7 +27,6 @@ h4 {
 
 footer {
   position: absolute;
-  bottom: 0;
   width: 100%;
   height: fit-content;
 }
@@ -68,10 +67,20 @@ nav {
 .Movie {
   display: flex;
   justify-content: center;
+  flex-direction: column;
   align-items: center;
   border: 1px solid #eed2a7;
-  width: 150px;
-  height: 200px;
+  width: 200px;
+  height: 300px;
+  margin: 1rem;
+}
+
+.Movie img {
+ max-height: 200px;
+}
+
+.movie-info {
+  font-size: 12px;
 }
 
 .search-form input {
@@ -103,7 +112,17 @@ nav {
   color: #69563a;
 }
 
-@keyframes App-logo-spin {
+.Loader {
+  margin: auto;
+  border: 3px solid #2a1d0c;
+  border-top: 3px solid #eed2a7;
+  animation: loader 1.5s linear infinite;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+@keyframes loader {
   from {
     transform: rotate(0deg);
   }

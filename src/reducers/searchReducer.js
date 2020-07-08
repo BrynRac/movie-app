@@ -7,7 +7,6 @@ const initialState = {
   movie: [],
 };
 
-
 export default function searchReducer(state = initialState, action) {
   if (action.type === SEARCH_MOVIE) {
     return {
