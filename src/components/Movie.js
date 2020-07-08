@@ -8,7 +8,7 @@ export default function Movie({ movie }) {
       </div>
 
       <div className="movie-info">
-        <p>{movie.Title}</p> <p>{movie.Year}</p>
+        <p>{movie.Title}</p>
       </div>
     </li>
   );
