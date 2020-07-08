@@ -1,6 +1,4 @@
-import { APIKEY } from '../APIKey';
-import axios from 'axios';
-import { SEARCH_MOVIE } from '../actions/types';
+import { SEARCH_MOVIE, FETCH_MOVIES } from '../actions/types';
 
 const initialState = {
   text: '',
@@ -9,12 +7,6 @@ const initialState = {
   movie: [],
 };
 
-export async function getMovies(query) {
-  const response = await axios(
-    `http://www.omdbapi.com/?apikey=${APIKEY}&t={${query}}`
-  );
-  return response;
-}
 
 export default function searchReducer(state = initialState, action) {
   if (action.type === SEARCH_MOVIE) {
@@ -22,6 +14,12 @@ export default function searchReducer(state = initialState, action) {
       ...state,
       text: action.payload,
       loading: false,
+    };
+  }
+  if (action.type === FETCH_MOVIES) {
+    return {
+      ...state,
+      movies: action.payload.Search,
     };
   }
   return state;
