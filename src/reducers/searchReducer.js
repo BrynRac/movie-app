@@ -1,8 +1,8 @@
 import { APIKEY } from '../APIKey';
 import axios from 'axios';
-import { SEARCH_MOVIE } from '../actions/actions';
+import { SEARCH_MOVIE } from '../actions/types';
 
-const initialStates = {
+const initialState = {
   text: '',
   movies: [],
   loading: false,
@@ -16,9 +16,13 @@ export async function getMovies(query) {
   return response;
 }
 
-export default function searchReducer(state = [], action) {
+export default function searchReducer(state = initialState, action) {
   if (action.type === SEARCH_MOVIE) {
-    return console.log('searchhhh');
+    return {
+      ...state,
+      text: action.payload,
+      loading: false,
+    };
   }
   return state;
 }

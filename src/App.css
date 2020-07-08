@@ -57,6 +57,52 @@ nav {
   margin-left: 1rem;
 }
 
+.movieList {
+  padding: 0;
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.Movie {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #eed2a7;
+  width: 150px;
+  height: 200px;
+}
+
+.search-form input {
+  padding: 0.3rem;
+  font-size: 1rem;
+  color: inherit;
+  width: 50%;
+  height: 30px;
+  outline: none;
+  background: #2a1d0c;
+  border: 1px solid #eed2a7;
+}
+
+.search-form input::placeholder {
+  color: #a79272;
+}
+
+.search-form button {
+  padding: 0.3rem;
+  margin-left: 1rem;
+  font-size: 1rem;
+  color: inherit;
+  background: #2a1d0c;
+  border: 1px solid #eed2a7;
+  cursor: pointer;
+}
+
+.Home h1 {
+  color: #69563a;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);

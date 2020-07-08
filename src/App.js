@@ -1,30 +1,31 @@
 import React, { useEffect } from 'react';
 import './App.css';
-import { Route, Switch } from 'react-router-dom';
+import { Route, Switch, } from 'react-router-dom';
+import { Provider } from 'react-redux';
+import store from './store';
 
 //components
-import Nav from './components/Nav';
+import Nav from './components/layout/Nav';
 import Home from './components/Home';
 import About from './components/About';
-import Footer from './components/Footer';
+import Footer from './components/layout/Footer';
 
 function App() {
-  useEffect(() => {
-    
-  }, [])
+  useEffect(() => {}, []);
   return (
-    <main className="App">
-      <Nav />
-      <div className="content-container">
-        <h1>Hello World</h1>
-        <Switch>
-          <Route exact path="/" component={Home} />
-          <Route path="/about" component={About} />
+    <Provider store={store}>
+        <main className="App">
           <Nav />
-        </Switch>
-      </div>
-      <Footer />
-    </main>
+          <div className="content-container">
+            <Switch>
+              <Route exact path="/" component={Home} />
+              <Route path="/about" component={About} />
+              <Nav />
+            </Switch>
+          </div>
+          <Footer />
+        </main>
+    </Provider>
   );
 }
 

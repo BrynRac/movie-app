@@ -1,10 +1,14 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import MovieList from './MovieList';
+import Search from './Search';
 
 function Home() {
   return (
-    <div>
-      <h2>Home</h2>
+    <div className="Home">
+      <h1>Search movies</h1>
+      <Search />
+      <MovieList />
     </div>
   );
 }
