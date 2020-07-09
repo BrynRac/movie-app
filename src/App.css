@@ -39,8 +39,13 @@ footer {
   display: flex;
   align-items: center;
 }
-footer p {
-  margin: 0 2rem;
+footer div {
+  display: flex;
+  align-items: center;
+}
+svg {
+  width: 25px;
+  height: 25px;
 }
 a {
   color: inherit;
@@ -211,7 +216,6 @@ button {
     height: 400px;
   }
   footer {
-    display: none;
   }
 
   .MovieInfo button {
