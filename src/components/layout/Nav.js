@@ -6,7 +6,7 @@ class Nav extends Component {
     return (
       <div className="nav-container">
         <nav>
-          <span>LOGO</span>
+          <span>OMDb App</span>
           <ul className="navLinks">
             <li>
               <Link to="/">Home</Link>
