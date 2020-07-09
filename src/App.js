@@ -19,7 +19,7 @@ function App() {
         <Nav />
         <div className="content-container">
           <Switch>
-            <Route exact path="/movie-app" component={Home} />
+            <Route exact path="/" component={Home} />
             <Route path="/about" component={About} />
             <Route path="/movie/:id" component={MovieInfo} />
           </Switch>

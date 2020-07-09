@@ -44,7 +44,7 @@ function MovieInfo({ movie, loading, match, fetchMovie, setLoading }) {
           <p>{movie.Plot}</p>
         </div>
       </div>
-      <Link to="/movie-app">
+      <Link to="/">
         <button>Back</button>
       </Link>
     </div>
