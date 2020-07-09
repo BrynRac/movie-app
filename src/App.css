@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Source+Sans+Pro:wght@400;700&display=swap');
 
+* {
+  margin: 0;
+  padding: 0;
+}
+
 html {
   background-color: #160d06;
   color: #eed2a7;
@@ -15,8 +20,8 @@ h4 {
 
 .App {
   position: relative;
-  margin: 2rem;
   min-height: 100vh;
+  overflow: hidden;
 }
 
 .content-container {
@@ -28,13 +33,21 @@ h4 {
 footer {
   position: absolute;
   width: 100%;
-  height: fit-content;
+  height: 3rem;
+  padding: 1rem;
+  bottom: 0;
+  display: flex;
+  align-items: center;
 }
-
+footer p {
+  margin: 0 2rem;
+}
 a {
   color: inherit;
   text-decoration: none;
   transition: color 0.1s;
+  height: fit-content;
+  width: fit-content;
 }
 
 a:hover {
@@ -45,6 +58,7 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin: 2rem;
 }
 
 .navLinks {
@@ -81,6 +95,15 @@ nav {
   top: 0;
   height: 100%;
   width: 100%;
+  cursor: pointer;
+  transition: ease-in-out 0.2s;
+  border: 1px solid transparent;
+}
+
+.Movie img:hover {
+  filter: brightness(1.1);
+  border: 1px solid #a79272;
+  transform: translateY(-1px);
 }
 
 .movie-info {
@@ -107,8 +130,9 @@ nav {
   color: #a79272;
 }
 
-.search-form button {
-  padding: 0.3rem;
+button {
+  width: 100px;
+  height: 40px;
   margin-left: 1rem;
   font-size: 1rem;
   color: inherit;
@@ -131,6 +155,36 @@ nav {
   border-radius: 50%;
 }
 
+.MovieInfo {
+  display: flex;
+  justify-content: center;
+  text-align: left;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 0 3rem;
+  max-width: 300px;
+}
+
+.info h2 {
+  color: #eed2a7;
+  margin-top: 0;
+}
+.info ul li {
+  margin: 0.5rem 0;
+}
+.info {
+  color: #a79272;
+  font-size: 14px;
+}
+.description {
+  margin-top: 1rem;
+  color: #eed2a7;
+  line-height: 1.5rem;
+}
 @keyframes loader {
   from {
     transform: rotate(0deg);

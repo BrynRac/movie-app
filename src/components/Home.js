@@ -7,7 +7,6 @@ import Loader from './Loader';
 function Home({ loading }) {
   return (
     <div className="Home">
-      <h1>Search movies</h1>
       <Search />
 
       {loading ? (

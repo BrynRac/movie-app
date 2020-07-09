@@ -6,7 +6,7 @@ function MovieList({ movies }) {
   return (
     <div>
       <ul className="movieList">
-        {movies.length 
+        {movies
           ? movies.map((movie) => <Movie key={movie.imdbID} movie={movie} />)
           : null}
       </ul>

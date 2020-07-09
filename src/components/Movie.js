@@ -1,10 +1,13 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
-export default function Movie({ movie }) {
+function Movie({ movie }) {
   return (
     <li className="Movie">
       <div className="movie-img">
-        <img src={movie.Poster} alt={movie.Title} />
+        <Link to={'/movie/' + movie.imdbID}>
+          <img src={movie.Poster} alt={movie.Title} />
+        </Link>
       </div>
 
       <div className="movie-info">
@@ -13,3 +16,5 @@ export default function Movie({ movie }) {
     </li>
   );
 }
+
+export default Movie;
