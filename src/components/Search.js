@@ -1,8 +1,12 @@
 import React from 'react';
-import { searchMovie, fetchMovies } from '../actions/searchActions.js';
+import {
+  searchMovie,
+  fetchMovies,
+  setLoading,
+} from '../actions/searchActions.js';
 import { connect } from 'react-redux';
 
-function Search({ searchMovie, fetchMovies, text }) {
+function Search({ setLoading, searchMovie, fetchMovies, text }) {
   const inputHandler = (e) => {
     const value = e.target.value;
     searchMovie(value);
@@ -14,6 +18,7 @@ function Search({ searchMovie, fetchMovies, text }) {
       alert('Please enter a search term!');
     } else {
       fetchMovies(text);
+      setLoading();
     }
   };
 
@@ -35,4 +40,8 @@ const mapStateToProps = (state) => ({
   text: state.movies.text,
 });
 
-export default connect(mapStateToProps, { searchMovie, fetchMovies })(Search);
+export default connect(mapStateToProps, {
+  setLoading,
+  searchMovie,
+  fetchMovies,
+})(Search);

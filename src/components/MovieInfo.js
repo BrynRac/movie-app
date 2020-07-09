@@ -1,15 +1,17 @@
 import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
-import { fetchMovie } from '../actions/searchActions';
+import Loader from './Loader';
+import { fetchMovie, setLoading } from '../actions/searchActions';
 
-function MovieInfo({ movie, match, fetchMovie }) {
+function MovieInfo({ movie, loading, match, fetchMovie, setLoading }) {
   useEffect(() => {
     fetchMovie(match.params.id);
-  }, [fetchMovie, match.params.id]);
+    setLoading();
+  }, [fetchMovie, match.params.id, setLoading]);
 
-  return (
-    <div className="MovieInfo">
+  const info = (
+    <div>
       <div className="movie-img">
         <img src={movie.Poster} alt={movie.Title} />
       </div>
@@ -47,6 +49,7 @@ function MovieInfo({ movie, match, fetchMovie }) {
       </Link>
     </div>
   );
+  return <div className="MovieInfo">{loading ? <Loader /> : info}</div>;
 }
 
 const mapStateToProps = (state) => ({
@@ -54,4 +57,4 @@ const mapStateToProps = (state) => ({
   movie: state.movies.movie,
 });
 
-export default connect(mapStateToProps, { fetchMovie })(MovieInfo);
+export default connect(mapStateToProps, { setLoading, fetchMovie })(MovieInfo);

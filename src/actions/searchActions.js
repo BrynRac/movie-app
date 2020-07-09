@@ -1,4 +1,4 @@
-import { SEARCH_MOVIE, FETCH_MOVIES, FETCH_MOVIE } from './types';
+import { SEARCH_MOVIE, FETCH_MOVIES, FETCH_MOVIE, LOADING } from './types';
 import axios from 'axios';
 import { APIKEY } from '../APIKey';
 
@@ -26,4 +26,8 @@ export const fetchMovie = (id) => async (dispatch) => {
   } catch (error) {
     alert('error in fetchMovie function: searchActions.js', error);
   }
+};
+
+export const setLoading = () => {
+  return { type: LOADING };
 };
