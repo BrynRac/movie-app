@@ -11,7 +11,7 @@ function MovieInfo({ movie, loading, match, fetchMovie, setLoading }) {
   }, [fetchMovie, match.params.id, setLoading]);
 
   const info = (
-    <div>
+    <div className="MovieInfo">
       <div className="movie-img">
         <img src={movie.Poster} alt={movie.Title} />
       </div>
@@ -49,7 +49,7 @@ function MovieInfo({ movie, loading, match, fetchMovie, setLoading }) {
       </Link>
     </div>
   );
-  return <div className="MovieInfo">{loading ? <Loader /> : info}</div>;
+  return <div>{loading ? <Loader /> : info}</div>;
 }
 
 const mapStateToProps = (state) => ({

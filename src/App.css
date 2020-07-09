@@ -185,6 +185,35 @@ button {
   color: #eed2a7;
   line-height: 1.5rem;
 }
+
+@media (max-width: 880px) {
+  .MovieInfo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .info {
+    margin-top: 1rem;
+    height: 400px;
+  }
+  footer {
+    display: none;
+  }
+
+  .MovieInfo button {
+    margin: 2rem;
+  }
+  .movieList {
+    min-width: 480px;
+  }
+
+  .Home {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
 @keyframes loader {
   from {
     transform: rotate(0deg);
