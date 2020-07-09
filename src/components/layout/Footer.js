@@ -9,6 +9,7 @@ export default function Footer() {
           <a
             style={{ marginLeft: '1rem' }}
             target="_blank"
+            rel="noopener noreferrer"
             href="https://github.com/BrynRac"
           >
             <FaGithub />
