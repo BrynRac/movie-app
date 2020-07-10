@@ -19,9 +19,9 @@ function App() {
         <Nav />
         <div className="content-container">
           <Switch>
-            <Route exact path="/" component={Home} />
-            <Route path="/about" component={About} />
-            <Route path="/movie/:id" component={MovieInfo} />
+            <Route exact path="/movie-app" component={Home} />
+            <Route path="/movie-app/about" component={About} />
+            <Route path="/movie-app/movie/:id" component={MovieInfo} />
           </Switch>
         </div>
         <Footer />

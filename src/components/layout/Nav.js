@@ -9,10 +9,10 @@ class Nav extends Component {
           <span>OMDb App</span>
           <ul className="navLinks">
             <li>
-              <Link to="/">Home</Link>
+              <Link to="/movie-app">Home</Link>
             </li>
             <li>
-              <Link to="/about">About</Link>
+              <Link to="/movie-app/about">About</Link>
             </li>
           </ul>
         </nav>

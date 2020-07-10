@@ -5,7 +5,7 @@ function Movie({ movie }) {
   return (
     <li className="Movie">
       <div className="movie-img">
-        <Link to={'/movie/' + movie.imdbID}>
+        <Link to={'movie-app/movie/' + movie.imdbID}>
           <img src={movie.Poster} alt={movie.Title} />
         </Link>
       </div>
